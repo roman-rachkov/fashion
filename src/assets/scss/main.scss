@@ -9,25 +9,22 @@ html {
     font-size: $mainFontSize;
     color: $mainFontColor;
     height: 100%;
-    @include screen-to($phoneWidth) {
-        font-size: 14px;
+    @include screen-to($desktopWidth) {
+        font-size: 16px;
+    }
+    @include screen-to($smDesktopWidth) {
+        font-size: 16px;
     }
     @include screen-to($tableWidth) {
         font-size: 15px;
     }
-    @include screen-to($desktopWidth) {
-        font-size: 16px;
+    @include screen-to($smTableWidth) {
+        font-size: 15px;
     }
-    //
-    //@media screen and (max-width: $desktopWidth) {
-    //    font-size: 16px;
-    //}
-    //@media screen and (max-width: $tableWidth) {
-    //    font-size: 15px;
-    //}
-    //@media screen and (max-width: $phoneWidth) {
-    //    font-size: 14px;
-    //}
+    @include screen-to($phoneWidth) {
+        font-size: 14px;
+    }
+
 }
 
 body {
@@ -38,6 +35,21 @@ body {
     font-weight: $mainFontWeight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @include screen-to($desktopWidth) {
+        font-size: 16px;
+    }
+    @include screen-to($smDesktopWidth) {
+        font-size: 16px;
+    }
+    @include screen-to($tableWidth) {
+        font-size: 15px;
+    }
+    @include screen-to($smTableWidth) {
+        font-size: 15px;
+    }
+    @include screen-to($phoneWidth) {
+        font-size: 14px;
+    }
 }
 
 *,
@@ -66,68 +78,27 @@ li {
     list-style-type: none;
 }
 
-section,
-.section {
-    position: relative;
-    padding: 40px 0;
-    @include screen-to($smDesktopWidth) {
-        padding: 36px 0;
-    }
-    @include screen-to($tableWidth) {
-        padding: 28px 0;
-    }
-    @include screen-to($phoneWidth) {
-        padding: 20px 0;
-    }
-    //@media screen and (max-width: $smDesktopWidth) {
-    //    padding: 36px 0;
-    //}
-    //@media screen and (max-width: $tableWidth) {
-    //    padding: 28px 0;
-    //}
-    //@media screen and (max-width: $phoneWidth) {
-    //    padding: 20px 0;
-    //}
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    min-height: 100vh;
-    min-width: 100vh;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 .container {
     width: 100%;
     flex: 0 0 auto;
     position: relative;
     margin: 0 auto;
     max-width: $desktopWidth;
+    @include screen-to($desktopWidth) {
+        max-width: $smDesktopWidth;
+    }
     @include screen-to($smDesktopWidth) {
-        min-width: $tableWidth;
+        max-width: $tableWidth;
     }
     @include screen-to($tableWidth) {
-        min-width: $phoneWidth;
+        max-width: $smTableWidth;
+    }
+    @include screen-to($smTableWidth) {
+        max-width: $phoneWidth;
     }
     @include screen-to($phoneWidth) {
-        min-width: $smPhoneWidth;
+        max-width: $smPhoneWidth;
     }
-    //@media screen and (max-width: $smDesktopWidth) {
-    //    max-width: $tableWidth;
-    //}
-    //@media screen and (max-width: $tableWidth) {
-    //    max-width: $phoneWidth;
-    //}
-    //@media screen and (max-width: $phoneWidth) {
-    //    max-width: $smPhoneWidth;
-    //}
 }
 
 // Modules:

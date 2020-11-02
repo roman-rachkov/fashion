@@ -52,7 +52,5 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {
-    "materialize-css": "^1.0.0-rc.2"
-  }
+  "dependencies": {}
 }
