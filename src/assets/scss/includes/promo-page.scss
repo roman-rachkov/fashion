@@ -1,0 +1,30 @@
+.promo-page{
+    &__trend-name{
+        font-size: 80px;
+        font-weight: 700;
+    }
+    &__description, &__title{
+        font-weight: 500;
+    }
+    &__buttons{
+        display: flex;
+        padding-top: 27px;
+
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 147px;
+        height: 35px;
+        background: $mainFontColor;
+        color: $backgroundColor;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-right: 34px;
+        &:hover{
+            background-color: $backgroundColor;
+            color: $mainFontColor;
+        }
+    }
+}

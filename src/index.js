@@ -1,6 +1,7 @@
 import "./js/common"
 import "./assets/scss/main.scss"
 import "./assets/css/main.css"
+import "../node_modules/@fortawesome/fontawesome-free/css/all.css"
 
 // import "../node_modules/jquery/dist/jquery.min"
 //

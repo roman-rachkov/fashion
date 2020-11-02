@@ -28,8 +28,13 @@ html {
 }
 
 body {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
+    background-color: $backgroundColor;
     font-family: $mainFont;
     font-size: $mainFontSize;
     font-weight: $mainFontWeight;
@@ -69,6 +74,10 @@ h6 {
 
 a {
     text-decoration: none;
+    color: $mainFontColor;
+    &:hover, &:active, &:focus{
+        color: $mainFontColor;
+    }
 }
 
 ul,
@@ -78,10 +87,13 @@ li {
     list-style-type: none;
 }
 
+main.content{
+
+    flex: 1 0 auto;
+}
+
 .container {
     width: 100%;
-    flex: 0 0 auto;
-    position: relative;
     margin: 0 auto;
     max-width: $desktopWidth;
     @include screen-to($desktopWidth) {
@@ -104,3 +116,7 @@ li {
 // Modules:
 // example: @import "modules/my-module.scss";
 @import "includes/header";
+@import "includes/first-screen";
+@import "includes/promo-page";
+@import "includes/gallery";
+@import "includes/footer";
