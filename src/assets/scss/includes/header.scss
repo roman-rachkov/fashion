@@ -24,7 +24,7 @@ header{
         justify-content: space-between;
         &__item{
             &:hover{
-                color: lighten($mainFontColor, 40%);
+                color: $activeLinkColor;
             }
         }
     }
@@ -48,8 +48,11 @@ header{
         &_active{
             a{
                 color: lighten($mainFontColor, 40%);
-                text-decoration: underline;
+                //text-decoration: underline;
                 cursor: default;
+                &:hover{
+                    text-decoration: none;
+                }
             }
         }
     }

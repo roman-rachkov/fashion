@@ -1,0 +1,5 @@
+mixin printMenu(cls, array)
+    ul(class= `${cls}__items`)
+        each val in array
+            li(class=`${cls}__item`)
+                a(href='#')= val

@@ -28,7 +28,8 @@ html {
 }
 
 body {
-    height: 100%;
+    position: relative;
+    height: auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -116,7 +117,11 @@ main.content{
 // Modules:
 // example: @import "modules/my-module.scss";
 @import "includes/header";
+@import "includes/block";
 @import "includes/first-screen";
 @import "includes/promo-page";
 @import "includes/gallery";
+@import "includes/shop";
+@import "includes/avone-styles";
+@import "includes/second-promo";
 @import "includes/footer";

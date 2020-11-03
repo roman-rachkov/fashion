@@ -1,3 +1,38 @@
-footer
+footer.page-footer
     .container
-        p footer here. im from pug 😉
+        .page-footer__block
+            span.page-footer__title YOUR LOGO
+            p.page-footer__text We earned a reputation of being good at what we do. Let us take your online shop to new dimension in success!
+            .page-footer__location
+                i.far.fa-compass.page-footer__icon
+                span.page-footer__adress Comilla, Bangladesh 3500
+            .page-footer__contacts
+                a(href="mailto:kawsarahmed0210@gmail.com").page-footer__email kawsarahmed0210@gmail.com
+                a(href="tel:01647470457").page-footer__phone 01647470457
+            .page-footer__socials
+                a(href="").page-footer__icon
+                    i.fab.fa-facebook
+                a(href="").page-footer__icon
+                    i.fab.fa-instagram
+                a(href="").page-footer__icon
+                    i.fab.fa-twitter
+                a(href="").page-footer__icon
+                    i.fab.fa-linkedin
+        .page-footer__block
+            span.page-footer__title RECIVE EMAIL UPDATES
+            form(method='POST', action='#').page-footer__subscribe-form.subscribe-form
+                input(type="email", name="email", placeholder='Your Email Address').subscribe-form__input
+                button(type='submit').subscribe-form__button join
+            nav.page-footer__menu.menu
+                .menu__block
+                    span.menu__title SHOP
+                    +printMenu('menu', ['Shop', 'Collection', 'Outlet', 'Lookbook'])
+                .menu__block
+                    span.menu__title HELP
+                    +printMenu('menu', ['FAQ', 'Privacy Policy', 'Terms and conditions', 'Return and Exchanges'])
+                .menu__block
+                    span.menu__title ABOUT
+                    +printMenu('menu', ['Journal', 'Our Story', 'Contact', 'Store Location'])
+    .page-footer__copywright
+        .container
+            span Copyright © 2020. Your company name  All rights reserved

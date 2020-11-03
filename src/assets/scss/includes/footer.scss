@@ -1,3 +1,149 @@
-footer{
+.page-footer {
     flex: 0 0 auto;
+    background-color: $footerBackgroundColor;
+    padding-top: 111px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        display: block;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 17px;
+    }
+
+    &__block {
+        width: 50%;
+
+        &:last-child {
+            padding-left: 45px;
+        }
+
+    }
+
+    &__location, &__contacts {
+        margin-bottom: 16px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__email {
+        text-decoration: underline;
+        margin-bottom: 4px;
+    }
+
+    &__email, &__phone {
+        &:hover {
+            color: $footerActiveLinkColor;
+        }
+    }
+
+    &__text, &__contacts, &__location {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    &__text {
+        max-width: 406px;
+        margin-bottom: 41px;
+    }
+
+    &__icon {
+        margin-right: 25px;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__socials {
+        a {
+            &:hover {
+                color: $footerActiveLinkColor;
+            }
+        }
+    }
+
+    &__copywright {
+        margin-top: 106px;
+        background-color: $footerBackgroundSecondColor;
+        height: 93px;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__subscribe-form {
+        display: flex;
+    }
+
+}
+
+.subscribe-form {
+    width: 100%;
+    height: 45px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+    margin-bottom: 70px;
+    &__input{
+        width: 85%;
+        height: 100%;
+        background-color: $backgroundColor;
+        font-size: 15px;
+        color: $mainFontColor;
+        padding: 11px 24px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        &::placeholder{
+            font-size: 15px;
+            color: $mainFontColor;
+        }
+    }
+    &__button{
+        width: 15%;
+        height: 100%;
+        background-color: $backgroundColor;
+        font-size: 15px;
+        color: $mainFontColor;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.menu {
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    &__item {
+        font-size: 15px;
+        margin-bottom: 21px;
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

@@ -1,0 +1,13 @@
+.block{
+    margin-top: 111px;
+    &__title{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    &__description{
+        font-size: 15px;
+        margin-bottom: 65px;
+    }
+}

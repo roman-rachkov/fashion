@@ -1,7 +1,11 @@
 .promo-page{
+    height: calc(100vh - 83px);
     &__trend-name{
         font-size: 80px;
         font-weight: 700;
+    }
+    &__title{
+        text-transform: uppercase;
     }
     &__description, &__title{
         font-weight: 500;
@@ -15,8 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 147px;
-        height: 35px;
+        padding: 4px 25px;
         background: $mainFontColor;
         color: $backgroundColor;
         font-weight: 500;

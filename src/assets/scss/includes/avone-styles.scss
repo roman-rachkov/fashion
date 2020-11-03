@@ -1,0 +1,54 @@
+.avone-styles{
+    height: 100%;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        min-height: 790px;
+    }
+    &__img{
+        position: absolute;
+        &--1{
+            left: 0;
+            bottom: 0;
+            width: calc(50% - .5em);
+            height: auto;
+        }
+        &--2{
+            width: 46.1%;
+            right: 38px;
+            z-index: 1;
+            top: 0;
+        }
+        &--3{
+            width: 22.1%;
+            bottom: 0;
+            right: 0;
+            border-top: 25px solid $backgroundColor;
+            border-left: 25px solid $backgroundColor;
+            z-index: 2;
+        }
+    }
+    &__link{
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 35px;
+        right: 24%;
+        border: 1px solid transparent;
+        border-bottom: 1px solid $mainFontColor;
+        transition: border 0.2s;
+        padding: 3px 5px;
+        &:hover{
+            border: 1px solid $mainFontColor;
+        }
+    }
+
+}
