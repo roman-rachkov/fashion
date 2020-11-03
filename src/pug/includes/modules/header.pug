@@ -1,5 +1,7 @@
 header.page-header
     .container
+        a(href='#', data-target='.mobile').mobile-toggle
+            span
         a(href="#").logo YOUR LOGO
         nav.top-menu
             ul.top-menu__items
@@ -17,3 +19,13 @@ header.page-header
                 i.far.fa-heart
             a(href="#").controls__item
                 i.fas.fa-shopping-cart
+    .container.mobile
+        nav.mobile-menu
+            ul.mobile-menu__items
+                each val, index in ['HOME', 'SHOP', 'LOOKBOOK', 'FEATURES', 'PAGES', 'BLOG']
+                    if index === 0
+                        li.mobile-menu__item.mobile-menu__item_active
+                            a(href='#')= val
+                    else
+                        li.mobile-menu__item
+                            a(href='#')= val

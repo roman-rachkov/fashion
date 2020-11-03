@@ -1,5 +1,5 @@
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     background: $backgroundColor;
     z-index: 100;
@@ -7,11 +7,57 @@ header{
         height: 83px;
         padding: 21px 0;
         width: 100%;
+        @include screen-to($tableWidth){
+            height: auto;
+        }
         .container{
             display: flex;
             align-items: center;
+            @include screen-to($tableWidth){
+                justify-content: space-between;
+            }
+            &.mobile{
+                display: none;
+                flex-direction: column;
+                padding-top: 20px;
+                &.active{
+                    @include screen-to($tableWidth){
+                        display: flex;
+                    }
+                }
+            }
         }
+        .mobile-toggle{
+            display: none;
+            width: 30px;
+            height: 20px;
+            @include screen-to($tableWidth){
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
 
+            span{
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: $mainFontColor;
+                &:before, &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $mainFontColor;
+                }
+                &:before{
+                    top: 0;
+                }
+                &:after{
+                    bottom: 0;
+                }
+            }
+        }
     }
     .logo{
         font-weight: 700;
@@ -22,6 +68,9 @@ header{
         width: 148px;
         display: flex;
         justify-content: space-between;
+        @include screen-to($tableWidth){
+            width: 70px;
+        }
         &__item{
             &:hover{
                 color: $activeLinkColor;
@@ -34,6 +83,9 @@ header{
     flex: 1 0 auto;
     max-width: 527px;
     margin: 0 auto;
+    @include screen-to($tableWidth){
+        display: none;
+    }
     &__items{
         display: flex;
         justify-content: space-between;
@@ -58,3 +110,38 @@ header{
     }
 }
 
+.mobile{
+    &-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &__items{
+            width: 100%;
+        }
+        &__item{
+            text-align: center;
+            width: 100%;
+            height: 40px;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            &_active{
+                a{
+                    color: lighten($mainFontColor, 40%);
+                    //text-decoration: underline;
+                    cursor: default;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
